@@ -10,20 +10,28 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
- * Delivery method to use during playback of a specific subtitle format.
+ * Enum HardwareEncodingType.
  */
 @Serializable
-public enum class SubtitleDeliveryMethod(
+public enum class HardwareEncodingType(
 	public val serialName: String
 ) {
-	@SerialName("Encode")
-	ENCODE("Encode"),
-	@SerialName("Embed")
-	EMBED("Embed"),
-	@SerialName("External")
-	EXTERNAL("External"),
-	@SerialName("Hls")
-	HLS("Hls"),
+	@SerialName("AMF")
+	AMF("AMF"),
+	@SerialName("QSV")
+	QSV("QSV"),
+	@SerialName("NVENC")
+	NVENC("NVENC"),
+	@SerialName("OMX")
+	OMX("OMX"),
+	@SerialName("V4L2M2M")
+	V4L2M2M("V4L2M2M"),
+	@SerialName("MediaCodec")
+	MEDIA_CODEC("MediaCodec"),
+	@SerialName("VAAPI")
+	VAAPI("VAAPI"),
+	@SerialName("VideoToolBox")
+	VIDEO_TOOL_BOX("VideoToolBox"),
 	;
 
 	public override fun toString(): String = serialName

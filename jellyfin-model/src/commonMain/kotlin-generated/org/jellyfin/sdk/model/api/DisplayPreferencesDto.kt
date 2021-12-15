@@ -56,9 +56,9 @@ public data class DisplayPreferencesDto(
 	 * Gets or sets the custom prefs.
 	 */
 	@SerialName("CustomPrefs")
-	public val customPrefs: Map<String, String>? = null,
+	public val customPrefs: Map<String, String?>,
 	/**
-	 * Gets or sets the scroll direction.
+	 * An enum representing the axis that should be scrolled.
 	 */
 	@SerialName("ScrollDirection")
 	public val scrollDirection: ScrollDirection,
@@ -73,7 +73,7 @@ public data class DisplayPreferencesDto(
 	@SerialName("RememberSorting")
 	public val rememberSorting: Boolean,
 	/**
-	 * Gets or sets the sort order.
+	 * An enum representing the sorting order.
 	 */
 	@SerialName("SortOrder")
 	public val sortOrder: SortOrder,

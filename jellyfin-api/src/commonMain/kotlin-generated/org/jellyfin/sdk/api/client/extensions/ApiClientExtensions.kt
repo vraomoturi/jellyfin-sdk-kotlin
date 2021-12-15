@@ -12,6 +12,7 @@ import org.jellyfin.sdk.api.operations.ArtistsApi
 import org.jellyfin.sdk.api.operations.AudioApi
 import org.jellyfin.sdk.api.operations.BrandingApi
 import org.jellyfin.sdk.api.operations.ChannelsApi
+import org.jellyfin.sdk.api.operations.ClientLogApi
 import org.jellyfin.sdk.api.operations.CollectionApi
 import org.jellyfin.sdk.api.operations.ConfigurationApi
 import org.jellyfin.sdk.api.operations.DashboardApi
@@ -56,6 +57,7 @@ import org.jellyfin.sdk.api.operations.SuggestionsApi
 import org.jellyfin.sdk.api.operations.SyncPlayApi
 import org.jellyfin.sdk.api.operations.SystemApi
 import org.jellyfin.sdk.api.operations.TimeSyncApi
+import org.jellyfin.sdk.api.operations.TmdbApi
 import org.jellyfin.sdk.api.operations.TrailersApi
 import org.jellyfin.sdk.api.operations.TvShowsApi
 import org.jellyfin.sdk.api.operations.UniversalAudioApi
@@ -84,6 +86,9 @@ public val ApiClient.brandingApi: BrandingApi
 
 public val ApiClient.channelsApi: ChannelsApi
 	get() = getOrCreateApi { ChannelsApi(it) }
+
+public val ApiClient.clientLogApi: ClientLogApi
+	get() = getOrCreateApi { ClientLogApi(it) }
 
 public val ApiClient.collectionApi: CollectionApi
 	get() = getOrCreateApi { CollectionApi(it) }
@@ -216,6 +221,9 @@ public val ApiClient.systemApi: SystemApi
 
 public val ApiClient.timeSyncApi: TimeSyncApi
 	get() = getOrCreateApi { TimeSyncApi(it) }
+
+public val ApiClient.tmdbApi: TmdbApi
+	get() = getOrCreateApi { TmdbApi(it) }
 
 public val ApiClient.trailersApi: TrailersApi
 	get() = getOrCreateApi { TrailersApi(it) }
